@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "tiff",
+    srcs = ["example_tiff_image.go"],
+    importpath = "github.com/davidbyttow/govips/v2/examples/tiff",
+    visibility = ["//visibility:public"],
+    deps = ["//vips"],
+)
