@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "jpeg",
+    srcs = ["example_mozjpeg_image.go"],
+    importpath = "github.com/davidbyttow/govips/v2/examples/jpeg",
+    visibility = ["//visibility:public"],
+    deps = ["//vips"],
+)

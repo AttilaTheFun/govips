@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "mem_tests",
+    srcs = ["test_resources.go"],
+    importpath = "github.com/davidbyttow/govips/v2/vips/mem_tests",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "mem_tests_test",
+    srcs = ["image_test.go"],
+    embed = [":mem_tests"],
+    deps = [
+        "//vips",
+        "@com_github_stretchr_testify//assert",
+        "@com_github_stretchr_testify//require",
+    ],
+)

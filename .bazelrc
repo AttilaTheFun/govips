@@ -1,0 +1,2 @@
+# All Bazel Builds
+build --symlink_prefix=.bazel/
