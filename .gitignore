@@ -3,4 +3,16 @@
 .vscode
 .idea
 node_modules/
-.bazel
+.bazel.env
+.env.*
+!.env.example
+env.sh
+*.pem
+*.p12
+*.p8
+*.key
+*.cer
+*.mobileprovision
+*.certSigningRequest
+GoogleService-Info.plist
+google-services.json

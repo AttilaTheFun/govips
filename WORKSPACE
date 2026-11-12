@@ -36,3 +36,23 @@ load("//:deps.bzl", "go_dependencies")
 go_dependencies()
 
 gazelle_dependencies()
+
+# bazel_pkg_config
+
+local_repository(
+    name = "bazel_pkg_config",
+    path = "/Users/logan/Developer/Bazel/bazel_pkg_config",
+)
+
+# http_archive(
+#     name = "bazel_pkg_config",
+#     sha256 = "6e2c08b957137bc793257fc4bfa577a462b0bf74914a2b349f4392157a0ed026",
+#     strip_prefix = "bazel_pkg_config-master",
+#     urls = ["https://github.com/cherrry/bazel_pkg_config/archive/master.zip"],
+# )
+
+load("@bazel_pkg_config//:pkg_config.bzl", "pkg_config")
+
+pkg_config(
+    name = "vips",
+)

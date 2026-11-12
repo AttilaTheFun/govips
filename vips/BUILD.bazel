@@ -59,6 +59,9 @@ go_library(
         "@org_golang_x_image//bmp",
         "@org_golang_x_net//html/charset",
     ],
+    cdeps = [
+        "@vips//:lib",
+    ]
 )
 
 go_test(
